@@ -1,14 +1,18 @@
 const gulp = require('gulp');
 
 function funcaoPadrao (callback) {
-    console.log('executando via gulp');
-    callback();
+    setTimeout(function () {
+        console.log('executando via gulp');
+        callback();
+    }, 2000)
 }
 
 function dizOi(callback) {
-    console.log('oi gulp');
-    dizTchau();
-    callback();
+    setTimeout (function () {
+        console.log('oi gulp');
+        dizTchau();
+        callback();
+    }, 1000)
 }
 
 function dizTchau() {
